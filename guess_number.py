@@ -11,6 +11,7 @@ def main():
             choosen_number = random_number(start, end)
             print(choosen_number)
             guess = input("A number between " + str(start - 1) + " and " + str(end + 1) + " has been choosen, it's time to guess:\n")
+            
         except ValueError:
             print("Input must be a number!") 
              

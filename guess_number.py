@@ -5,12 +5,15 @@ msg_welcome = "Welcome to Guess The Number!\nPlease input in what interval you w
 def main():
     while True:
         print(msg_welcome)
-        start = input("Input starting number:\n")
-        end = input("Input end number:\n")
-        choosen_number = random_number(start, end)
-        print(choosen_number)
-        guess = input("A number between " + str(start) + " and " + str(end) + "has been choosen, it's time to guess:\n")
-        
+        try:
+            start = int(input("Input starting number:\n"))
+            end = int(input("Input end number:\n"))
+            choosen_number = random_number(start, end)
+            print(choosen_number)
+            gueuss = input("A number between " + str(start - 1) + " and " + str(end + 1) + " has been choosen, it's time to guess:\n")
+        except ValueError:
+            print("Input must be a number!")
+             
 
 #Define function that generate a number between a and b
 def random_number(a, b):

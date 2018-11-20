@@ -27,4 +27,6 @@ print("Longitude: ", lon)
 screen = turtle.Screen()
 screen.setup(720, 360)
 screen.setworldcoordinates(-180, -90, 180, 90)
-#screen.bgpic("map.png")
+screen.bgpic("map.png")
+
+turtle.mainloop()
